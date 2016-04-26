@@ -7557,7 +7557,7 @@
 	            return React.createElement(
 	                'div',
 	                null,
-	                'hello'
+	                'hello谁是谁'
 	            );
 	        }
 	    }]);

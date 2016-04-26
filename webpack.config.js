@@ -14,7 +14,7 @@ module.exports = {
     output: {
         path: BUILD,
         filename: '[name].js',
-        publicPath: "http://127.0.0.1:8080/build"
+        publicPath: 'build'
     },
     module: {
         loaders: [
@@ -29,6 +29,8 @@ module.exports = {
         ]
     },
     plugins: [
-
-    ]
+        new OpenBrowserPlugin({
+            url: 'http://localhost:8080'
+        })
+    ],
 };
