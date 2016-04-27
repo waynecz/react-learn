@@ -32,5 +32,5 @@ module.exports = {
         new OpenBrowserPlugin({
             url: 'http://localhost:8080'
         })
-    ],
+    ]
 };
