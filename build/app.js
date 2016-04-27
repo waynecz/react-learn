@@ -2826,7 +2826,7 @@
 	    if ('function' === typeof exports.formatArgs) {
 	      args = exports.formatArgs.apply(self, args);
 	    }
-	    var logFn = enabled.log || exports.log || console.log.bind(console);
+	    var logFn = App.log || exports.log || console.log.bind(console);
 	    logFn.apply(self, args);
 	  }
 	  enabled.enabled = true;
@@ -6960,7 +6960,7 @@
 	  var levelExists = global.console && global.console[level] && global.console[level].apply;
 	  logObject[level] = levelExists ? function () {
 	    return global.console[level].apply(global.console, arguments);
-	  } : (level === 'log' ? function () {} : logObject.log);
+	  } : (level === 'log' ? function () {} : App.log);
 	});
 
 	module.exports = logObject;
