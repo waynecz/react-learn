@@ -1,15 +1,16 @@
 var webpack = require('webpack');
 var path = require('path');
+// var autoprefixer = require('autoprefixer');
 var HtmlwebpackPlugin = require('html-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
-var ASS = path.resolve(__dirname, 'assets');
+var CSS = path.resolve(__dirname, 'app/style');
 var BUILD = path.resolve(__dirname, 'build');
 
 
 module.exports = {
     entry: {
-        app: ['webpack/hot/dev-server', 'webpack-dev-server/client?http://127.0.0.1:8080', './assets/main.js']
+        app: ['webpack-dev-server/client?http://127.0.0.1:8080', 'webpack/hot/dev-server', './app/main.js']
     },
     output: {
         path: BUILD,
@@ -21,10 +22,12 @@ module.exports = {
             {
                 test: /\.js[x]?$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react','es2015']
-                }
+                loader: 'react-hot!babel-loader?presets=react&presets=es2015'
+            },
+            {
+                test: /\.scss$/,
+                loaders: ['style', 'css', 'autoprefixer', 'sass'],
+                include: CSS
             }
         ]
     },

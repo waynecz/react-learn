@@ -14,18 +14,18 @@ export default class App extends React.Component {
         }
     }
 
-    static log (p) {
+    static log(p) {
         console.log(p)
     }
 
-    handleChange(e) {
+    handleChange(e){
         console.log(e);
         this.setState({value: e.target.value});
     }
 
     fetch() {
         if (this.state.fetched) {
-            document
+            // document
         } else {
             this.setState({loading: true});
             fetch('https://api.github.com/search/repositories?q=javascript&sort=stars')
@@ -75,8 +75,8 @@ export default class App extends React.Component {
         return (
             <div>
                 <input type="text" ref="myIut" onChange={this.handleChange}/>
-                <div ref="myDiv" style={{opacity: this.state.opacity}}>11</div>
-                <input type="button" value="aaa" onClick={this.fetch.bind(this)}/>
+                <div ref="myDiv" style={{opacity: this.state.opacity}}></div>
+                <input type="button" value="anniu" onClick={this.fetch.bind(this)}/>
                 <List data={rst}/>
             </div>
         )
@@ -91,4 +91,3 @@ App
     .defaultProps = {
     title: 'waynecz'
 };
-

@@ -6,7 +6,6 @@ class list extends React.Component {
     }
 
     render() {
-        console.log(this.props.data);
         let rst,
             data = this.props.data;
 
