@@ -18,6 +18,13 @@ module.exports = {
         publicPath: 'build'
     },
     module: {
+        // preLoaders: [
+        //     {
+        //         test: /\.js[x]?$/,
+        //         exclude: /node_modules/,
+        //         loader: 'eslint-loader?{rules:{semi:0}}'
+        //     }
+        // ],
         loaders: [
             {
                 test: /\.js[x]?$/,

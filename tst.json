@@ -1,0 +1,40 @@
+{
+  "documentId": "04_01",
+  "annotations": [
+    {
+      "id": "T1",
+      "text": "十天前",
+      "type": "时间",
+      "begin": 0,
+      "end": 3
+    },
+    {
+      "id": "T2",
+      "text": "心肌梗塞",
+      "type": "疾病",
+      "begin": 7,
+      "end": 11
+    },
+    {
+      "id": "T3",
+      "text": "心肌梗塞",
+      "type": "疾病",
+      "begin": 7,
+      "end": 11
+    },
+    {
+      "id": "T4",
+      "text": "心肌梗塞",
+      "type": "疾病",
+      "begin": 7,
+      "end": 11
+    },
+    {
+      "id": "T5",
+      "text": "心肌梗塞",
+      "type": "疾病",
+      "begin": 7,
+      "end": 11
+    }
+  ]
+}

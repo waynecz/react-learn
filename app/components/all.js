@@ -16,8 +16,8 @@ export default class All extends React.Component {
 
     componentDidMount() {
         // let btn = document.querySelector('#btn');
-        // btn.addEventListener(function () {
-        //     this.getData()
+        // btn.addEventListener('click', function () {
+        //     lg(this)
         // }, false)
     }
 
@@ -34,8 +34,6 @@ export default class All extends React.Component {
     }
 
     render() {
-
-
         let renderData = this.state.resolveData;
         // let loading    = this.state.isFetching;
         let rstDOM;
@@ -59,10 +57,8 @@ export default class All extends React.Component {
         return (
             <div className="wrap">
                 <div className="input-wrap">
-                <textarea name="" id="" cols="30" rows="10" className="input-area">
-
-                </textarea>
-                    <button id="btn" className="input-btn" onClick={this.getData()}>
+                    <textarea name="" id="" cols="30" rows="10" className="input-area">ss</textarea>
+                    <button id="btn" className="input-btn" onClick={this.getData}>
                         提交
                     </button>
                 </div>
